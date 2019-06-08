@@ -1,0 +1,7 @@
+id, value
+232adad321ad, answers.contactnumber/0.extra.hi:hello
+232adad321ad, answers.contactnumber/0.type:landline
+232adad321ad, answers.contactnumber/0.extensions/0.number:999.99
+232adad321ad, answers.contactnumber/0.extensions/1.number:11111
+232adad321ad, answers.contactnumber/1.type:mobile
+232adad321ad, answers.contactnumber/1.extensions/0.number:12345

@@ -1,0 +1,19 @@
+[{
+    "id": 23123123,
+    "answers": {
+        "contactnumber": {
+            "type": "landline",
+            "extensions": {
+                "number": 999999
+            }
+        }
+    }
+},
+{
+    "id": 1337,
+    "answers": {
+        "contactnumber": {
+            "type": "mobile"
+        }
+    }
+}]

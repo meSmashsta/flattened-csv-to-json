@@ -1,0 +1,4 @@
+id, value
+232adad321ad, answers.contactnumber.type:landline
+232adad321ad, answers.contactnumber.extensions.number:99999
+1337, answers.contactnumber.type:mobile
