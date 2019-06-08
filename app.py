@@ -108,6 +108,7 @@ with open(userInput) as csv_file:
                     lastKeys.append(keyVal[0])
         line_count += 1
 
+os.makedirs('output', exist_ok=True)
 file = open('output/output.json', 'w')
 # file.write(json.dumps(profiles, indent=4, sort_keys=True))
 file.write(json.dumps(profiles))
