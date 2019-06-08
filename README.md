@@ -13,3 +13,6 @@ Console application to parse CSV into JSON.
 2. Download and install Python ^3.
 3. GIT: clone this repository into your computer
 4. IDE / VSCODE: Import newly cloned project
+
+    cd c:\AWHProjects\csv-parsing
+    python app.py
