@@ -52,7 +52,7 @@ def properValue(value):
     proper = None
     try:
         proper = eval(value)
-    except NameError:
+    except:
         proper = value
     return proper
 

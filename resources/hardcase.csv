@@ -5,4 +5,5 @@ id, value
 232adad321ad, answers.contactnumber/1.type:mobile
 232adad321ad, answers.contactnumber/1.extensions/0.number:12345
 1337, answers.contactnumber/0.type:landline
+1337, answers.contactnumber/0.interest:09
 1337, answers.contactnumber/0.extensions/0.number:99999
