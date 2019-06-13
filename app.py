@@ -42,7 +42,9 @@ def setAttribute(profile, lastKeys, field, value):
 def defineField(profile, field):
     keyVal = field.split('/')
     if len(keyVal) > 1:
-        profile[keyVal[0]] = []
+        key = keyVal[0]
+        if key not in profile:
+            profile[key] = []
     elif field not in profile:
         profile[field] = {}
 
