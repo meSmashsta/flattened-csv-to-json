@@ -1,3 +1,5 @@
 id,value
-aaaa,profiles/0.religion:Catholic
-aaaa,profiles/0.civil_status:Widowed
+000210ae-ddfd-42f2-b79b-01908c4b73ef,profiles/0.religion:'Catholic'
+000210ae-ddfd-42f2-b79b-01908c4b73ef,profiles/0.education:'Elementary Level'
+000210ae-ddfd-42f2-b79b-01908c4b73ef,profiles/0.civil_status:'Widowed'
+000210ae-ddfd-42f2-b79b-01908c4b73ef,profiles/0.employment.nature:'empty'

@@ -9,24 +9,23 @@ def setValue(value, field, it):
     if not isinstance(value, dict) and not isinstance(value, list):
             it[field] = value
 
+def findField(ds, k, keyVal, it):
+    it = ds[k]
+    if isinstance(it, list): # if array then find correct index
+        index = int(keyVal[1])
+        if len(it) > index:
+            it = it[index]
+    return it
+
 def setAttribute(profile, lastKeys, field, value):
     it = {}
     for key in lastKeys:
         keyVal = key.split('/')
         k = keyVal[0]
         if not it:
-            it = profile[k]
+            it = findField(profile, k, keyVal, it)
         else:
-            it = it[k]
-            # it is list it means we need to search its content
-            # go to that index
-            # if it[k][key.split('/')[0]] as found exist
-            # it = found
-            # if not exist keep it as it is
-            if isinstance(it, list):
-                index = int(keyVal[1])
-                if len(it) > index:
-                    it = it[index]
+            it = findField(it, k, keyVal, it)
 
     if isinstance(it, list):
         index = int(lastKeys[-1].split('/')[1]) # get index from ['contactnumber/0']
