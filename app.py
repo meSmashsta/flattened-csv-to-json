@@ -75,7 +75,8 @@ with open(userInput) as csv_file:
     for row in csv_reader: # read the csv line by line
         if line_count > 0: # don't read columns
             # print(row[1].rsplit(':', 1))
-            fieldValue = row[1].rsplit(':', 1)
+            fieldValueRaw = row[1]
+            fieldValue = fieldValueRaw.split(":", 1)
             rawFields = [x.strip() for x in fieldValue[0].split('.')]
             rawFields[-1] = rawFields[-1] + ':' + fieldValue[1]
             # stop updating profile when id changes
@@ -90,7 +91,7 @@ with open(userInput) as csv_file:
 
             lastKeys = []
             for field in rawFields: # build the profile up
-                keyVal = field.split(':') # field and value format, we separate it
+                keyVal = field.split(':', 1) # field and value format, we separate it
                 if len(keyVal) == 1: # ['answers'] if field doesn't contain value we build it
                     if len(lastKeys) == 0:
                         defineField(profile, field)
