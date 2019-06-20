@@ -66,7 +66,7 @@ if not os.path.exists(userInput):
     sys.exit(0)
 
 print('parser running...')
-with open(userInput) as csv_file:
+with open(userInput, encoding="utf-8") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     profile = {}
@@ -111,8 +111,8 @@ with open(userInput) as csv_file:
         line_count += 1
 
 os.makedirs('output', exist_ok=True)
-file = open('output/output.json', 'w')
-# file.write(json.dumps(profiles, indent=4, sort_keys=True))
-file.write(json.dumps(profiles))
-file.close()
+
+with open('output/output.json', 'w', encoding="utf-8") as outfile:
+    json.dump(profiles, outfile, ensure_ascii=False)
+
 print('parser completed...')
